@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_group_array">
+        <item>개발</item>
+        <item>디자인</item>
+    </string-array>
+    <string-array name="work_style">
+        <item>원격</item>
+        <item>상주</item>
+        <item>원격/상주</item>
+    </string-array>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:padding="24dp"
+    >
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="커리어 하이"
+        android:textSize="45dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="75dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:background="#B3B3B3"/>
+
+    <TextView
+        android:id="@+id/catchphrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="커리어 하이로 당신의 career high를 실천하세요!"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/startImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/startimage"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/catchphrase" />
+
+    <TextView
+        android:id="@+id/askJobText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="당신은...?"
+        app:layout_constraintTop_toBottomOf="@id/startImage"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/freelancerButton"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:text="프리랜서"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/askJobText"/>
+
+    <Button
+        android:id="@+id/clientButton"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="클라이언트"
+        app:layout_constraintBaseline_toBaselineOf="@id/freelancerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

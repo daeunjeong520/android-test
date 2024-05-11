@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/box"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/box_border"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <!-- 프리랜서 이름  -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="200dp"
+        android:text="홍길동"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        />
+
+    <!-- 상주/원격  -->
+    <TextView
+        android:id="@+id/workStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="상주/원격 가능"
+        android:textColor="@color/gray"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
+
+    <!-- 직무  -->
+    <com.google.android.material.chip.Chip
+        android:id="@+id/job"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@+id/workStyle"
+        app:layout_constraintTop_toBottomOf="@+id/workStyle"
+        tools:text="웹 개발자" />
+
+    <!-- 경력 -->
+    <TextView
+        android:id="@+id/careerYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경력: 3년"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/box"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/job"
+        android:layout_marginEnd="15dp"
+         />
+
+    <!-- 의뢰 버튼  -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="93dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/baseline_camera_alt_24"
+
+        app:layout_constraintEnd_toEndOf="@+id/box"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <Button
+        android:id="@+id/requestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="의뢰하기"
+        app:layout_constraintTop_toBottomOf="@+id/job"
+        app:layout_constraintStart_toStartOf="@+id/job" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

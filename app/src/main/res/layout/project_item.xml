@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/box"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/box_border"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <!-- 프로젝트 이름  -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="[사내 업무관리도구 개발 - Java, SpringFramework]"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="17dp"
+        />
+
+    <!-- 직군  -->
+    <TextView
+        android:id="@+id/jobGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="개발"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
+
+    <!-- 직무  -->
+    <TextView
+        android:id="@+id/job"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="자바/서버 개발자"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobGroup"
+        />
+
+    <!-- 예상금액 -->
+    <TextView
+        android:id="@+id/salary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="500"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:textSize="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/job"/>
+
+
+    <TextView
+        android:id="@+id/salaryUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="만원"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toEndOf="@+id/salary"
+        app:layout_constraintTop_toBottomOf="@+id/job"/>
+
+    <!-- 시작 예정일  -->
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:textStyle="bold"
+        android:text="2024-05-30"
+        android:textColor="@color/gray"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
